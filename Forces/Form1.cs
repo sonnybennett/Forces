@@ -19,7 +19,7 @@ namespace Forces
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
 
 
         }
@@ -43,19 +43,33 @@ namespace Forces
         }
         private void Button1_Click(object sender, EventArgs e)
         {
-            double force = double.Parse(textBox1.Text);
-            double Angle = double.Parse(textBox2.Text);
+            try
+            {
+                double force = double.Parse(textBox1.Text);
+                double Angle = double.Parse(textBox2.Text);
 
-            double Fx = force * cos(Angle);
-            double Fy = force * sin(Angle);
+                double Fx = force * cos(Angle);
+                double Fy = force * sin(Angle);
 
-            label1.Text = "Fx = " + Fx;
-            label2.Text = "Fy = " + Fy;
-        }
+                label1.Text = "Fx = " + Fx;
+                label2.Text = "Fy = " + Fy;
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
+                //run the code between these brackets
+                //jump to catch if an error occurs
+            }
+            catch
+            {
+                MessageBox.Show("Cant do tha ye muppet");
+            }
 
+
+
+
+
+
+            {
+
+            }
         }
     }
 }
