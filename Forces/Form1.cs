@@ -44,22 +44,23 @@ namespace Forces
         private void Button1_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   //read force and angle from textboxes
                 double force = double.Parse(textBox1.Text);
                 double Angle = double.Parse(textBox2.Text);
-
+                //read Fx and Fy from labels
                 double Fx = force * cos(Angle);
                 double Fy = force * sin(Angle);
-
+                //run the code between these brackets 
                 label1.Text = "Fx = " + Fx;
                 label2.Text = "Fy = " + Fy;
 
-                //run the code between these brackets
-                //jump to catch if an error occurs
+                
+                
             }
             catch
             {
-                MessageBox.Show("Cant do tha ye muppet");
+                // show error message
+                MessageBox.Show("Cant do tha ye nobhead");
             }
 
 
