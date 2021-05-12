@@ -53,6 +53,7 @@ namespace Forces
                 //run the code between these brackets 
                 label1.Text = "Fx = " + Fx;
                 label2.Text = "Fy = " + Fy;
+                double Force = Math.Sqrt(Fx * Fx + Fy * Fy);
 
                 
                 
@@ -71,6 +72,71 @@ namespace Forces
             {
 
             }
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {   //read force and angle from textboxes
+                double force = double.Parse(textBox1.Text);
+                double Angle = double.Parse(textBox2.Text);
+                //read Fx and Fy from labels
+                double Fx = force * cos(Angle);
+                double Fy = force * sin(Angle);
+                //run the code between these brackets 
+                label1.Text = "Fx = " + Fx;
+                label2.Text = "Fy = " + Fy;
+
+
+
+            }
+            catch
+            {
+                // show error message
+                MessageBox.Show("Cant do tha ye nobhead");
+            }
+
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
